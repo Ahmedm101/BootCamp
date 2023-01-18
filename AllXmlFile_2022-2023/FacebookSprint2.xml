@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+  <test thread-count="5" name="Sprint2 test in chrome">
+   <parameter name="browser" value="chrome"></parameter>
+   <parameter name="urladdress" value="https://www.facebook.com"></parameter>
+    <classes>
+      <class name="FacebookTestNG.Sprint2_Facebook"/>
+    </classes>
+  </test> <!-- Test -->
+  
+ <!-- <test thread-count="5" name="Sprint2 test in edge">
+   <parameter name="browser" value="edge"></parameter>
+   <parameter name="urladdress" value="https://www.facebook.com"></parameter>
+    <classes>
+      <class name="FacebookTestNG.Sprint2_Facebook"/>
+    </classes>
+  </test>  Test -->
+</suite> <!-- Suite -->

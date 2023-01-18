@@ -16,6 +16,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 
 public class Utilities {
    
@@ -45,6 +46,11 @@ public class Utilities {
 		 
 	 }
   
+  @AfterMethod
+  public void afterMethod() {
+	  everyTestScreenshot();
+  }
+  
 
   @AfterClass
   public void afterClass() {
@@ -60,6 +66,32 @@ public class Utilities {
 			File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			try {
 				FileHandler.copy(SS,new File(UD+"\\Screenshots\\"+Folder+"\\"+DATE+Folder+".jpg"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace(); }
+  }
+  
+  public void errordispalyingScreenshot() {
+	  String UD=System.getProperty("user.dir");
+			Date Dateformat = new Date();
+			String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
+			
+			File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileHandler.copy(SS,new File(UD+"\\Screenshots\\Error\\"+DATE+"error.jpg"));
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace(); }
+  }
+ 
+  public void everyTestScreenshot() {
+	  String UD=System.getProperty("user.dir");
+			Date Dateformat = new Date();
+			String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
+			
+			File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileHandler.copy(SS,new File(UD+"\\Screenshots\\EveryTest\\"+DATE+"error.jpg"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace(); }
