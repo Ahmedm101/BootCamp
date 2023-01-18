@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-01-17T01:15:02 CST" name="Suite" finished-at="2023-01-17T01:15:44 CST" duration-ms="42535">
+    <groups>
+    </groups>
+    <test started-at="2023-01-17T01:15:02 CST" name="Sprint1_Google test in chrome" finished-at="2023-01-17T01:15:24 CST" duration-ms="22403">
+      <class name="GoogleTestNG.Sprint1_Google">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String,java.lang.String)[pri:0, instance:GoogleTestNG.Sprint1_Google@e15b7e8]" started-at="2023-01-17T01:15:02 CST" name="browserInitialization" finished-at="2023-01-17T01:15:04 CST" duration-ms="2462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.google.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="Test1()[pri:0, instance:GoogleTestNG.Sprint1_Google@e15b7e8]" started-at="2023-01-17T01:15:04 CST" name="Test1" finished-at="2023-01-17T01:15:24 CST" duration-ms="19583" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:GoogleTestNG.Sprint1_Google@e15b7e8]" started-at="2023-01-17T01:15:24 CST" name="afterClass" finished-at="2023-01-17T01:15:24 CST" duration-ms="339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- GoogleTestNG.Sprint1_Google -->
+    </test> <!-- Sprint1_Google test in chrome -->
+    <test started-at="2023-01-17T01:15:24 CST" name="Sprint1_Google test in edge" finished-at="2023-01-17T01:15:44 CST" duration-ms="20068">
+      <class name="GoogleTestNG.Sprint1_Google">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String,java.lang.String)[pri:0, instance:GoogleTestNG.Sprint1_Google@1b11171f]" started-at="2023-01-17T01:15:24 CST" name="browserInitialization" finished-at="2023-01-17T01:15:27 CST" duration-ms="3213" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.google.com/]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="Test1()[pri:0, instance:GoogleTestNG.Sprint1_Google@1b11171f]" started-at="2023-01-17T01:15:27 CST" name="Test1" finished-at="2023-01-17T01:15:44 CST" duration-ms="16486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:GoogleTestNG.Sprint1_Google@1b11171f]" started-at="2023-01-17T01:15:44 CST" name="afterClass" finished-at="2023-01-17T01:15:44 CST" duration-ms="369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- GoogleTestNG.Sprint1_Google -->
+    </test> <!-- Sprint1_Google test in edge -->
+  </suite> <!-- Suite -->
+</testng-results>
