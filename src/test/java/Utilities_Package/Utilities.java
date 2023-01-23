@@ -48,53 +48,82 @@ public class Utilities {
   
   @AfterMethod
   public void afterMethod() {
-	  everyTestScreenshot();
+	  screenshotAfterMethod();
   }
   
 
   @AfterClass
-  public void afterClass() {
-	  Screenshot("Google");
+  public void tearDown() {
+	// driver.close();
 	  
   }
   
-  public void Screenshot(String Folder) {
+  public void randomScreenshot() {
 	  String UD=System.getProperty("user.dir");
 			Date Dateformat = new Date();
 			String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
 			
 			File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			try {
-				FileHandler.copy(SS,new File(UD+"\\Screenshots\\"+Folder+"\\"+DATE+Folder+".jpg"));
+				FileHandler.copy(SS,new File(UD+"\\Screenshots\\randomSS\\"+DATE+"random.jpg"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace(); }
   }
   
-  public void errordispalyingScreenshot() {
+ 
+  public void screenshotAfterMethod() {
 	  String UD=System.getProperty("user.dir");
 			Date Dateformat = new Date();
 			String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
 			
 			File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 			try {
-				FileHandler.copy(SS,new File(UD+"\\Screenshots\\Error\\"+DATE+"error.jpg"));
+				FileHandler.copy(SS,new File(UD+"\\Screenshots\\aftermethodSS\\"+DATE+"aftermethod.jpg"));
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace(); }
   }
- 
-  public void everyTestScreenshot() {
-	  String UD=System.getProperty("user.dir");
-			Date Dateformat = new Date();
-			String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
-			
-			File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-			try {
-				FileHandler.copy(SS,new File(UD+"\\Screenshots\\EveryTest\\"+DATE+"error.jpg"));
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace(); }
+  
+  public void failedScreenshot() {
+	  String UD = System.getProperty("user.dir");
+	  
+	  Date Dateformat = new Date();
+		String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
+		
+		File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileHandler.copy(SS,new File(UD+"\\Screenshots\\failed\\"+DATE+"aftermethod.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); }
   }
 
+  public void successScreenshot() {
+	  String UD = System.getProperty("user.dir");
+	  
+	  Date Dateformat = new Date();
+		String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
+		
+		File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileHandler.copy(SS,new File(UD+"\\Screenshots\\sucess\\"+DATE+"aftermethod.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); }
+  }
+  
+  public void skippedScreenshot() {
+	  String UD = System.getProperty("user.dir");
+	  
+	  Date Dateformat = new Date();
+		String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
+		
+		File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		try {
+			FileHandler.copy(SS,new File(UD+"\\Screenshots\\skipped\\"+DATE+"aftermethod.jpg"));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace(); }
+  }
 }

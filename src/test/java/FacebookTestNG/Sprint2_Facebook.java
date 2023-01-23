@@ -3,7 +3,7 @@ package FacebookTestNG;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import POM_Facebook.SignUpPage;
+import POM_Facebook.LogInPage;
 import Utilities_Package.Utilities;
 
 import java.util.List;
@@ -12,26 +12,33 @@ import org.openqa.selenium.By;
 import org.testng.annotations.DataProvider;
 
 public class Sprint2_Facebook extends Utilities {
-  @Test(dataProvider = "signUpDataCollection")
-  public void signUpInvalidcredentials(String Email , String Password) throws InterruptedException {
-	  
-	  SignUpPage sp = new SignUpPage(driver);
+	
+  @Test(dataProvider = "FacebookLogIn")
+  public void LogIn(String Email , String Password) throws InterruptedException {
+	 //verifying the url
+	 String Url = driver.getCurrentUrl();
+	 String FrsUrl ="https://www.facebook.com/";
+	 SoftAssert ob = new SoftAssert();
+	 ob.assertNotEquals(Url, FrsUrl);
+	 
+	  LogInPage sp = new LogInPage(driver);
 	  sp.emailfield(Email);
 	  Thread.sleep(2000);
 	  sp.passwordfield(Password);
 	  Thread.sleep(2000);
 	  sp.loginClick();
 	  Thread.sleep(3000);
-	  errordispalyingScreenshot();
 	  driver.navigate().back();
 	  Thread.sleep(3000);
-      sp.VerifyLink();
+      
+	  //verifying the Link of the page 
+	  sp.VerifyLink();
     
-	  
+	  ob.assertAll();
   }
 
-  @DataProvider
-  public Object[][] signUpDataCollection(){
+  @DataProvider(name ="FacebookLogIn")
+  public Object[][] facebookLogInData (){
 	 return new Object[][] {
 		  new Object[] { "abc345@gmail.com", "wer1234" },
 	      new Object[] { "hulip90@gmail.com", "b789200!" },
