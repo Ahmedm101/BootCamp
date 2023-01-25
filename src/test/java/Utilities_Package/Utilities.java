@@ -85,18 +85,17 @@ public class Utilities {
 				e.printStackTrace(); }
   }
   
-  public void failedScreenshot() {
+  public void failedScreenshot() throws IOException {
 	  String UD = System.getProperty("user.dir");
 	  
 	  Date Dateformat = new Date();
 		String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
 		
 		File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		try {
+	
 			FileHandler.copy(SS,new File(UD+"\\Screenshots\\failed\\"+DATE+"aftermethod.jpg"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace(); }
+		
+			
   }
 
   public void successScreenshot() {
@@ -113,17 +112,15 @@ public class Utilities {
 			e.printStackTrace(); }
   }
   
-  public void skippedScreenshot() {
+  public void skippedScreenshot() throws IOException {
 	  String UD = System.getProperty("user.dir");
 	  
 	  Date Dateformat = new Date();
 		String DATE =Dateformat.toString().replace(":","_").replace(" ","_");
 		
 		File SS =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		try {
+	
 			FileHandler.copy(SS,new File(UD+"\\Screenshots\\skipped\\"+DATE+"aftermethod.jpg"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace(); }
+		
   }
 }
