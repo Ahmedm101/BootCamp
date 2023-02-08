@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.asserts.SoftAssert;
 
 public class LogInPage {
     
@@ -37,7 +38,11 @@ public class LogInPage {
 	}
 	
 	public void loginClick() {
+		SoftAssert ob = new SoftAssert();
+		ob.assertTrue(Login.isDisplayed(),"login button should be displayed");
 		Login.click();
+		ob.assertAll();
+		
 	}
 	
 	public void VerifyLink() {

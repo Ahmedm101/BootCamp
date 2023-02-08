@@ -1,5 +1,9 @@
 package GoogleTestNG;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -20,6 +24,15 @@ public class Sprint1_Google extends Utilities {
 	GoogleHomepage hp = new GoogleHomepage(driver);
 	hp.storeClick();
 	Thread.sleep(3000);
+	
+  List<WebElement> LoginItemNo= driver.findElements(By.xpath("//button[text()='Log in & sign up']"));
+  
+  int loginbtno=LoginItemNo.size();
+  
+  if (loginbtno==1) {
+	  driver.findElement(By.xpath("//button[text()='Log in & sign up']")).click();
+  }
+  
 	
 	StorePage sp = new StorePage(driver);
 	sp.doorbellClick();

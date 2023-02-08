@@ -22,6 +22,9 @@ public class GoogleHomepage {
 		Searchfield.clear();
 		Searchfield.sendKeys(item);
 	}
+	public void searchfieldClick() {
+		Searchfield.click();
+	}
 	
 	public void googlesearchClick() {
 		GoogleSearch.click();

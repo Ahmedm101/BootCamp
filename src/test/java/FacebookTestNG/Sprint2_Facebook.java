@@ -17,13 +17,13 @@ import org.testng.annotations.DataProvider;
 
 public class Sprint2_Facebook extends Utilities {
 	
-  @Test(dataProvider = "FacebookLogIn")
+  @Test(priority=1,dataProvider = "FacebookLogIn")
   public void LogIn(String Email , String Password) throws InterruptedException {
 	 //verifying the url
 	 String Url = driver.getCurrentUrl();
-	 String FrsUrl ="https://www.facebook.com";
+	 String FrsUrl ="https://www.facebook.com//";
 	 SoftAssert ob = new SoftAssert();
-	 ob.assertNotEquals(Url, FrsUrl);
+	 ob.assertEquals(Url, FrsUrl);
 	 
 	  LogInPage sp = new LogInPage(driver);
 	  sp.emailfield(Email);
@@ -31,6 +31,7 @@ public class Sprint2_Facebook extends Utilities {
 	  sp.passwordfield(Password);
 	  Thread.sleep(2000);
 	  sp.loginClick();
+	  
 	  Thread.sleep(3000);
 	  driver.navigate().back();
 	  Thread.sleep(3000);
@@ -41,7 +42,8 @@ public class Sprint2_Facebook extends Utilities {
 	  ob.assertAll();
   }
   
-  @Test
+  
+  @Test(priority=2, dependsOnMethods="LogIn")
   public void forgetPassword() throws InterruptedException {
 	  LogInPage lp = new LogInPage(driver);
 	  lp.forgotPasswordClick();
@@ -76,7 +78,7 @@ public class Sprint2_Facebook extends Utilities {
   }
 
   @DataProvider(name ="FacebookLogIn")
-  public Object[][] facebookLogInData (){
+  public Object[][] facebookLogInDataInvalid (){
 	 return new Object[][] {
 		  new Object[] { "abc345@gmail.com", "wer1234" },
 	      new Object[] { "hulip90@gmail.com", "b789200!" },

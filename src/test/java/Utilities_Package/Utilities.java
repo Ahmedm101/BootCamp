@@ -23,7 +23,7 @@ public class Utilities {
 	public static WebDriver driver;
 	
   @Parameters({"browser","urladdress"})
-  @BeforeClass()
+  @BeforeClass(alwaysRun = true)
   public void browserInitialization(String NameOfTheBrowser, String Url) {
 	  
 	 String UD = System.getProperty("user.dir");

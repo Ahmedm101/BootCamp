@@ -9,15 +9,65 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Sprint2 test in chrome</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">90,902</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Sprint1_Google test in chrome</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">1,945</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Sprint1_Google test in edge</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">14,370</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num">0</th><th class="num">0</th><th class="num">16,315</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Sprint2 test in chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">FacebookTestNG.Sprint2_Facebook</td><td><a href="#m0">LogIn</a></td><td rowspan="5">1674632702647</td><td rowspan="5">14949</td></tr><tr class="passedeven"><td><a href="#m1">LogIn</a></td></tr><tr class="passedeven"><td><a href="#m2">LogIn</a></td></tr><tr class="passedeven"><td><a href="#m3">LogIn</a></td></tr><tr class="passedeven"><td><a href="#m4">LogIn</a></td></tr><tr class="passedeven"><td><a href="#m5">forgetPassword</a></td><td rowspan="1">1674632732855</td><td rowspan="1">8554</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Sprint1_Google test in chrome &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">GoogleTestNG.Sprint1_Google</td><td><a href="#m0">browserInitialization</a></td><td rowspan="1">1675816223954</td><td rowspan="1">1902</td></tr><tr><th colspan="4">Sprint1_Google test in chrome &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">GoogleTestNG.Sprint1_Google</td><td><a href="#m1">afterMethod</a></td><td rowspan="1">1675816225883</td><td rowspan="1">-1675816225883</td></tr><tr class="skippedeven"><td><a href="#m2">tearDown</a></td><td rowspan="1">1675816225884</td><td rowspan="1">-1675816225884</td></tr><tr><th colspan="4">Sprint1_Google test in chrome &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">GoogleTestNG.Sprint1_Google</td><td><a href="#m3">Test1</a></td><td rowspan="1">1675816225878</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Sprint1_Google test in edge &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">GoogleTestNG.Sprint2_Google</td><td><a href="#m4">f</a></td><td rowspan="1">1675816229072</td><td rowspan="1">8899</td></tr></tbody>
 </table>
-<h2>Sprint2 test in chrome</h2><h3 id="m0">FacebookTestNG.Sprint2_Facebook#LogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>hulip90@gmail.com</td><td></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">FacebookTestNG.Sprint2_Facebook#LogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>abhy</td><td>123adcyt</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">FacebookTestNG.Sprint2_Facebook#LogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>hulip90@gmail.com</td><td>b789200!</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">FacebookTestNG.Sprint2_Facebook#LogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>abc345@gmail.com</td><td>wer1234</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">FacebookTestNG.Sprint2_Facebook#LogIn</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td></td><td>abcry67</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">FacebookTestNG.Sprint2_Facebook#forgetPassword</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Sprint1_Google test in chrome</h2><h3 id="m0">GoogleTestNG.Sprint1_Google#browserInitialization</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th></tr><tr class="param stripe"><td>chrome</td><td>https://www.google.com/</td></tr><tr><th colspan="2">Exception</th></tr><tr><td colspan="2"><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;LAPTOP-EDNQF8JN&apos;, ip: &apos;192.168.1.224&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:49)
+	at Utilities_Package.Utilities.browserInitialization(Utilities.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">GoogleTestNG.Sprint1_Google#afterMethod</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">GoogleTestNG.Sprint1_Google#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">GoogleTestNG.Sprint1_Google#Test1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
+System info: host: &apos;LAPTOP-EDNQF8JN&apos;, ip: &apos;192.168.1.224&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:157)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:101)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:81)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:49)
+	at Utilities_Package.Utilities.browserInitialization(Utilities.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Sprint1_Google test in edge</h2><h3 id="m4">GoogleTestNG.Sprint2_Google#f</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

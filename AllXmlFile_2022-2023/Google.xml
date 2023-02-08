@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
+<suite name="Suite" parallel="tests">
 
   <test thread-count="5" name="Sprint1_Google test in chrome">
     <parameter name="browser" value="chrome"></parameter>
@@ -11,13 +11,14 @@
     </classes>
   </test> <!-- Google Test for Sprint1 -->
   
-   <test thread-count="5" name="Sprint1_Google test in edge">
+ <test thread-count="5" name="Sprint1_Google test in edge">
      <parameter name="browser" value="edge"></parameter>
      <parameter name="urladdress" value="https://www.google.com/"></parameter>
   
     <classes>
-      <class name="GoogleTestNG.Sprint1_Google"/>
+   <!--   <class name="GoogleTestNG.Sprint1_Google"/>--> 
+      <class name="GoogleTestNG.Sprint2_Google"></class>
     </classes>
-  </test> <!-- Google Test for Sprint1 -->
+  </test> 
   
 </suite> <!-- Suite -->

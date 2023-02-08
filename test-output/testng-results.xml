@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="0" skipped="1">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-25T01:44:10 CST" name="Suite" finished-at="2023-01-25T01:45:41 CST" duration-ms="90902">
+  <suite started-at="2023-02-07T18:30:23 CST" name="Suite" finished-at="2023-02-07T18:30:38 CST" duration-ms="14370">
     <groups>
     </groups>
-    <test started-at="2023-01-25T01:44:10 CST" name="Sprint2 test in chrome" finished-at="2023-01-25T01:45:41 CST" duration-ms="90902">
-      <class name="FacebookTestNG.Sprint2_Facebook">
-        <test-method is-config="true" signature="browserInitialization(java.lang.String,java.lang.String)[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:44:10 CST" name="browserInitialization" finished-at="2023-01-25T01:44:13 CST" duration-ms="2949" status="PASS">
+    <test started-at="2023-02-07T18:30:23 CST" name="Sprint1_Google test in chrome" finished-at="2023-02-07T18:30:25 CST" duration-ms="1945">
+      <class name="GoogleTestNG.Sprint1_Google">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String,java.lang.String)[pri:0, instance:GoogleTestNG.Sprint1_Google@f0da945]" started-at="2023-02-07T18:30:23 CST" name="browserInitialization" finished-at="2023-02-07T18:30:25 CST" duration-ms="1902" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -16,126 +16,164 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[https://www.facebook.com]]>
+                <![CDATA[https://www.google.com/]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-EDNQF8JN', ip: '192.168.1.224', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-EDNQF8JN', ip: '192.168.1.224', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at Utilities_Package.Utilities.browserInitialization(Utilities.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- browserInitialization -->
+        <test-method signature="Test1()[pri:0, instance:GoogleTestNG.Sprint1_Google@f0da945]" started-at="2023-02-07T18:30:25 CST" name="Test1" finished-at="2023-02-07T18:30:25 CST" duration-ms="0" status="SKIP">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-EDNQF8JN', ip: '192.168.1.224', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: session not created: This version of ChromeDriver only supports Chrome version 107
+Current browser version is 109.0.5414.120 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Build info: version: '4.4.0', revision: 'e5c75ed026a'
+System info: host: 'LAPTOP-EDNQF8JN', ip: '192.168.1.224', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.4.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}], desiredCapabilities=Capabilities {browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}}]
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:144)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:102)
+at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:67)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:156)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
+at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:242)
+at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:157)
+at org.openqa.selenium.chromium.ChromiumDriver.<init>(ChromiumDriver.java:101)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:81)
+at org.openqa.selenium.chrome.ChromeDriver.<init>(ChromeDriver.java:49)
+at Utilities_Package.Utilities.browserInitialization(Utilities.java:33)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:176)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:122)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GoogleTestNG.Sprint1_Google@f0da945]" started-at="2023-02-07T18:30:25 CST" name="afterMethod" finished-at="1969-12-31T18:00:00 CST" duration-ms="-1675816225883" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:GoogleTestNG.Sprint1_Google@f0da945]" started-at="2023-02-07T18:30:25 CST" name="tearDown" finished-at="1969-12-31T18:00:00 CST" duration-ms="-1675816225884" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- GoogleTestNG.Sprint1_Google -->
+    </test> <!-- Sprint1_Google test in chrome -->
+    <test started-at="2023-02-07T18:30:23 CST" name="Sprint1_Google test in edge" finished-at="2023-02-07T18:30:38 CST" duration-ms="14370">
+      <class name="GoogleTestNG.Sprint2_Google">
+        <test-method is-config="true" signature="browserInitialization(java.lang.String,java.lang.String)[pri:0, instance:GoogleTestNG.Sprint2_Google@60bd273d]" started-at="2023-02-07T18:30:23 CST" name="browserInitialization" finished-at="2023-02-07T18:30:29 CST" duration-ms="5117" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.google.com/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserInitialization -->
-        <test-method signature="LogIn(java.lang.String,java.lang.String)[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:44:13 CST" name="LogIn" data-provider="FacebookLogIn" finished-at="2023-01-25T01:44:31 CST" duration-ms="17993" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[abc345@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[wer1234]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="f()[pri:0, instance:GoogleTestNG.Sprint2_Google@60bd273d]" started-at="2023-02-07T18:30:29 CST" name="f" finished-at="2023-02-07T18:30:37 CST" duration-ms="8899" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LogIn -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:44:31 CST" name="afterMethod" finished-at="2023-01-25T01:44:32 CST" duration-ms="150" status="PASS">
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:GoogleTestNG.Sprint2_Google@60bd273d]" started-at="2023-02-07T18:30:37 CST" name="afterMethod" finished-at="2023-02-07T18:30:38 CST" duration-ms="335" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="LogIn(java.lang.String,java.lang.String)[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:44:32 CST" name="LogIn" data-provider="FacebookLogIn" finished-at="2023-01-25T01:44:47 CST" duration-ms="15366" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hulip90@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[b789200!]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogIn -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:44:47 CST" name="afterMethod" finished-at="2023-01-25T01:44:47 CST" duration-ms="162" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="LogIn(java.lang.String,java.lang.String)[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:44:47 CST" name="LogIn" data-provider="FacebookLogIn" finished-at="2023-01-25T01:45:02 CST" duration-ms="14598" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abcry67]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogIn -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:02 CST" name="afterMethod" finished-at="2023-01-25T01:45:02 CST" duration-ms="149" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="LogIn(java.lang.String,java.lang.String)[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:02 CST" name="LogIn" data-provider="FacebookLogIn" finished-at="2023-01-25T01:45:17 CST" duration-ms="14949" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[hulip90@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogIn -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:17 CST" name="afterMethod" finished-at="2023-01-25T01:45:17 CST" duration-ms="149" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="LogIn(java.lang.String,java.lang.String)[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:17 CST" name="LogIn" data-provider="FacebookLogIn" finished-at="2023-01-25T01:45:32 CST" duration-ms="14659" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[abhy]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[123adcyt]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- LogIn -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:32 CST" name="afterMethod" finished-at="2023-01-25T01:45:32 CST" duration-ms="166" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="forgetPassword()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:32 CST" name="forgetPassword" finished-at="2023-01-25T01:45:41 CST" duration-ms="8554" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgetPassword -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:41 CST" name="afterMethod" finished-at="2023-01-25T01:45:41 CST" duration-ms="127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:FacebookTestNG.Sprint2_Facebook@47e2e487]" started-at="2023-01-25T01:45:41 CST" name="tearDown" finished-at="2023-01-25T01:45:41 CST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:GoogleTestNG.Sprint2_Google@60bd273d]" started-at="2023-02-07T18:30:38 CST" name="tearDown" finished-at="2023-02-07T18:30:38 CST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- FacebookTestNG.Sprint2_Facebook -->
-    </test> <!-- Sprint2 test in chrome -->
+      </class> <!-- GoogleTestNG.Sprint2_Google -->
+    </test> <!-- Sprint1_Google test in edge -->
   </suite> <!-- Suite -->
 </testng-results>
